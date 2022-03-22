@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tela Inicial do Projeto</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+  c
+  <body>
+    <div class="container text-center col-3">
+      <form
+        class="row col-12 d-flex justify-content-center"
+        style="border: 1px solid #eee; padding: 10px; margin-top: 20%"
+      >
+        <h1>Login</h1>
+        <div class="col-12">
+          <input
+            type="text"
+            class="form-control"
+            id="txtUsuarioLogin"
+            placeholder="Usuário"
+            style="margin: 10px"
+          />
+        </div>
+        <div class="col-12">
+          <input
+            type="password"
+            class="form-control"
+            id="txtSenhaLogin"
+            placeholder="Senha"
+            style="margin: 10px"
+          />
+        </div>
+        <button
+          type="button"
+          class="btn btn-primary col-4"
+          id="btnLogin"
+          style="margin: 10px"
+          onclick="efetuarLogin()"
+        >
+          Login
+        </button>
+      </form>
+
+      <button
+        type="button"
+        class="btn btn-link"
+        id="btnCadastrar"
+        data-bs-toggle="modal"
+        data-bs-target="#exampleModal"
+      >
+        Ou clique aqui para cadastrar
+      </button>
+    </div>
+
+    <!--=======================MODAL =========================-->
+
+    <!-- Modal -->
+    <div
+      class="modal fade"
+      id="exampleModal"
+      tabindex="-1"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">
+              Cadastro de Usuário
+            </h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <form class="row g-3">
+              <div class="col-12">
+                <input
+                  type="text"
+                  class="form-control"
+                  id="txtNome"
+                  placeholder="Nome Completo"
+                />
+              </div>
+              <div class="col-12">
+                <input
+                  type="email"
+                  class="form-control"
+                  id="txtEmail"
+                  placeholder="Email"
+                />
+              </div>
+              <div class="col-12">
+                <input
+                  type="text"
+                  class="form-control"
+                  id="txtCPF"
+                  placeholder="CPF"
+                />
+              </div>
+              <div class="col-12">
+                <input
+                  type="text"
+                  class="form-control"
+                  id="txtUsuario"
+                  placeholder="Usuário"
+                />
+              </div>
+              <div class="col-12">
+                <input
+                  type="password"
+                  class="form-control"
+                  id="txtSenha"
+                  placeholder="Senha"
+                />
+              </div>
+              <div class="col-12">
+                <input
+                  type="password"
+                  class="form-control"
+                  id="txtConfirma"
+                  placeholder="A mesma senha"
+                />
+              </div>
+              <div class="col-12">
+                <input
+                  type="text"
+                  class="form-control"
+                  id="txtFoto"
+                  placeholder="Foto do Perfil"
+                />
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-primary"
+              onclick="gravarUsuario()"
+            >
+              Gravar Novo Usuário
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/script.js"></script>
+  </body>
+</html>

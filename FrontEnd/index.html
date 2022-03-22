@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Vanessa Aizaawa</title>
+</head>
+
+<body onload="carregarProdutosHome()">
+    <header class="topo">
+        <!-- é o Wrapper, Container, Embrulho -->
+        <div class="content">
+            <div class="flex">
+                <img src="./Imagem/Logo.png" alt="Logotipo da Vanessa Aizaawa">
+                <div id="myNav" class="overlay">
+                    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                    <ul class="overlay-content">
+                        <li><a href="#terapia-oriental">Terapias Orientais</a></li>
+                        <li><a href="#estetica-integrativa">Estética Integrativa</a></li>
+                        <li><a href="#sobre">Sobre</a></li>
+                        <li><a href="#contato">Contato</a></li>
+                        <li><a href="login-restrito.html"><img src=Imagem/restrito.png></a></li>
+                    </ul>
+                  </div>
+                  <span id="hamburguer_menu"style="font-size:30px;cursor:pointer;" onclick="openNav()">&#9776;</span>
+                <nav class="menu">
+                    <ul class="flex">
+                        <li><a href="#terapia-oriental">Terapias Orientais</a></li>
+                        <li><a href="#estetica-integrativa">Estética Integrativa</a></li>
+                        <li><a href="#sobre">Sobre</a></li>
+                        <li><a href="#contato">Contato</a></li>
+                        <li><a href="login-restrito.html"><img src=Imagem/restrito.png></a></li>
+                    </ul>
+                </nav>
+            </div> <!-- Fim class="flex" -->
+
+        </div> <!-- Fim class="content" -->
+
+    </header> <!-- Fim topo -->
+    <section class="banner">
+        <div class="content flex">
+            <div class="textos">
+                <h1>Seja muito bem vinda(o)!</h1>
+                <p>A arte de promover bem estar, saúde e beleza através das terapias orientais e estética integrativa, posso afirmar que vem da observação da natureza. Cada dia me torno mais receptiva, sensível e consciente do amor e da perfeição do Grande Criador. Minha eterna gratidão por ser um canal de luz e contribuir para sua evolução.</p>
+                <button id="btn_banner">Agende sua avaliação</button>
+                <!-- https://api.whatsapp.com/send?phone=5511960649928&text=Quero%20agendar%20uma%20*avalia%C3%A7%C3%A3o*. -->
+            </div>
+            <img src="./Imagem/topo.png" alt="Desenho com duas caixas de presentes e dois personagens">
+
+        </div>
+
+    </section><!-- Fim class="banner" -->
+
+    <main class="conteudo_principal espacamento_secao">
+        <div class="content flex conteudo_servicos">
+            <section class="conteudo_cartoes flex" id="terapia-oriental">
+            <!-- lista com 3 produtos por linha -->
+            <div id="conteudo"></div>
+            </section><!-- Fim class=conteudo_cartoes flex -->
+
+        </div>
+        <section class="banner" id="sobre">
+            <div class="content flex">
+                <img src="./Imagem/sobre.png" alt="Vanessa Aizaawa">
+                <div class="textos">
+                    <img src="./Imagem/Logo.png" alt="Logotipo da Vanessa Aizaawa">
+                    <!-- <h1>Sobre</h1> -->
+                    <p>Profissional em Acupuntura e Terapias Orientais <br> 
+                        CRTO nº 3441 <br>
+                        Formada pelo Instituto Shen Long <br>
+                        Atuou como assistente do Dr Domenico Scilipot <br> 
+                        Discípula do Prof. Paulo Américo Vieira, introdutor dos Herbais Chineses no Brasil.
+                    
+                    </p>
+                    
+                </div>
+                
+    
+            </div>
+    
+
+    <section class="conteudo_formulario flex" id="contato">
+        <div class="content flex">
+            <!-- <div class="sobre flex"> -->
+                <!-- <p>Telefone +55 11 9-6064-9928</p> -->
+                <!-- <p>E-mail vanessa21juliana@gmail.com</p> -->
+            <!-- </div> -->
+            <form class="formulario_contato flex">
+                <h2>Entre em contato</h2>
+                <input class="input" id="input_nome" type="text" placeholder="Nome">
+                <input class="input" id="input_email" type="text" placeholder="E-mail">
+                <input class="input" id="input_telefone" type="text" placeholder="Telefone">
+
+                <textarea class="input" id="input_mensagem" rows="1" maxlength="280"
+                    placeholder="Mensagem..."></textarea>
+
+                <button onclick="enviarMensagem()" type="button" id="btn_mensagem">Enviar mensagem</button>
+            </form>
+        </div>
+    </section><!-- Fim class="conteudo_formulario flex" -->
+
+    <div class="conteudo_rodape flex">
+        <div class="content flex">
+            <footer class="rodape flex">
+                <p>&copy; Todos os direitos reservados</p>
+                <p>Desenvolvido por Luciana Ferraz do Amaral Martins</p>
+            </footer>
+        </div>
+    </div>
+    <script>
+        function openNav() {
+          document.getElementById("myNav").style.width = "100%";
+        }
+        
+        function closeNav() {
+          document.getElementById("myNav").style.width = "0%";
+        }
+        </script>
+        <script src="js/script.js"></script>
+        <!-- script do bootstrap -->
+        <script src="js/bootstrap.min.js"></script>
+</body>
+
+</html>

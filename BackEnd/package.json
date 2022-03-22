@@ -1,0 +1,27 @@
+{
+  "name": "projetocomercial",
+  "version": "1.0.0",
+  "description": "Projeto de backend para uma aplicação comercial ",
+  "main": "./src/main/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "swagger-autogen":"node swagger.js"
+  },
+  "keywords": [
+    "NodeJS",
+    "MySQL",
+    "Backend",
+    "Servidor"
+  ],
+  "author": "Luciana Ferraz do Amaral Martins",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt": "^5.0.1",
+    "cors": "^2.8.5",
+    "express": "^4.17.2",
+    "jsonwebtoken": "^8.5.1",
+    "mysql": "^2.18.1",
+    "swagger-autogen": "^2.18.8",
+    "swagger-ui-express": "^4.3.0"
+  }
+}

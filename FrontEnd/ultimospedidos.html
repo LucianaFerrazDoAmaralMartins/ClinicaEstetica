@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home Page</title>
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+  </head>
+
+  <body onload="carregarUltimosPedidos()" style="background-color: #f6dbd5">
+    <!-- Início da barra de navegação -->
+    <nav
+      class="navbar navbar-expand-lg navbar-dark"
+      style="background-color: #27494e"
+    >
+      <div class="container-fluid">
+        <a class="navbar-brand" href="index.html">Vanessa Aizaawa</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="menu">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link" href="home.html">Home</a>
+            </li>
+
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                id="navbarDropdown"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                Tratamentos
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li>
+                  <script>
+                    //Capturando o token
+                    var token = window.location.search.substring(1);
+                    document.write(
+                      `<a class="dropdown-item" href="cadastro.html?${token}">Cadastro</a>`
+                    );
+                  </script>
+                </li>
+
+                <li>
+                  <a class="dropdown-item" href="listarproduto.html"
+                    >Listar Produtos</a
+                  >
+                </li>
+              </ul>
+            </li>
+
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                id="navbarDropdown"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                Pedidos
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li>
+                  <a class="dropdown-item" href="ultimospedidos.html"
+                    >Últimos pedidos</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item" href="pedidosporid.html"
+                    >Pedidos por Id</a
+                  >
+                </li>
+              </ul>
+            </li>
+          </ul>
+          <form class="d-flex">
+            <input
+              class="form-control me-2"
+              type="search"
+              placeholder="Nome do Tratamento"
+              aria-label="Search"
+              id="txtNomeProduto"
+            />
+            <button
+              class="btn btn-outline-success"
+              type="submit"
+              id="btn_pesquisar"
+            >
+              Pesquisar
+            </button>
+          </form>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Fim da barra de navegação -->
+
+    <!-- Últimos Pedidos -->
+
+    <div class="container">
+      <h3 id="titulo">Últimos Pedidos Realizados</h3>
+
+      <div id="conteudo" class="row"></div>
+    </div>
+
+    <!-- Fim Produtos em destaque -->
+
+    <!-- scripts -->
+    <script src="js/script.js"></script>
+
+    <!-- script do bootstrap -->
+    <script src="js/bootstrap.min.js"></script>
+  </body>
+</html>

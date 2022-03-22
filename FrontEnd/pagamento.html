@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/style.css" />
+
+    <title>Pagamento</title>
+  </head>
+  <body style="background-color: #a26370">
+    <section class="conteudo_formulario flex" id="pagamento">
+      <div class="content flex">
+        <!-- Início da área do formulário -->
+        <div class="container col-4">
+          <div class="row col-12 text-center">
+            <form onsubmit="return false">
+              <h2 style="margin: 20px" id="titulopagamento">Pagamento</h2>
+              <div class="col-12">
+                <input
+                  style="margin: 10px"
+                  type="text"
+                  class="form-control"
+                  id="input_txtAgendamento"
+                  placeholder="Reserva do agendamento"
+                />
+              </div>
+              <div class="col-12">
+                <input
+                  style="margin: 10px"
+                  type="text"
+                  class="form-control"
+                  id="input_txtPreco"
+                  placeholder="Preço do Tratamento"
+                />
+              </div>
+              <div class="col-12">
+                <input
+                  style="margin: 10px"
+                  type="text"
+                  class="form-control"
+                  id="input_txtNomeproduto"
+                  placeholder="Nome do Tratamento"
+                />
+              </div>
+             
+              <div class="col-12">
+                <input
+                  style="margin: 10px"
+                  type="text"
+                  class="form-control"
+                  id="input_txtFormapagamento"
+                  placeholder="Forma de pagamento"
+                />
+              </div>
+              <div class="col-12">
+                <input
+                  style="margin: 10px"
+                  type="text"
+                  class="form-control"
+                  id="input_txtDetalhe"
+                  placeholder="Descrição dos dados do pagamento"
+                  maxlength="340"
+                />
+              </div>
+
+              <div class="col-12">
+                <input
+                  style="margin: 10px"
+                  type="text"
+                  class="form-control"
+                  id="input_txtNparcela"
+                  placeholder="Número de Parcelas"
+                />
+              </div>
+              <div class="col-12">
+                <input
+                  style="margin: 10px"
+                  type="text"
+                  class="form-control"
+                  id="input_txtVparcela"
+                  placeholder="Valor de cada parcela"
+                />
+              </div>
+              <button
+                type="button"
+                class="btn btn-primary"
+                id="btn_efetuaragendamento"
+                onclick="efetuarCadastroAgendamento()"
+              >
+                Efetuar agendamento
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Fim class="conteudo_formulario flex" -->
+    <!-- Fim da área do formulário -->
+
+    <script>
+      var agenda = window.location.search.split("&");
+      document.getElementById("input_txtAgendamento").value=agenda[1].substring(7);
+      document.getElementById("input_txtPreco").value=agenda[2].substring(0);
+      document.getElementById("input_txtNomeproduto").value=agenda[3].substring(3);
+ 
+
+    </script>
+    <!-- scripts -->
+    <script src="js/script.js"></script>
+
+    <!-- script do bootstrap -->
+    <script src="js/bootstrap.min.js"></script>
+  </body>
+</html>
